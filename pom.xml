@@ -126,7 +126,6 @@
                         <configuration>
                             <excludes>
                                 <exclude>**/README.md</exclude>
-                                <exclude>.travis.yml</exclude>
                                 <exclude>**/*.svg</exclude>
                                 <exclude>dependency-reduced-pom.xml</exclude>
                                 <exclude>**/com.github.chrishantha.sample.base.SampleApplication</exclude>
