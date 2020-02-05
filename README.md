@@ -1,7 +1,17 @@
 Sample Java Programs
 ====================
 
-This repository contains some sample programs. All are Maven projects and can be run directly using "java -jar". Based on the article found here: 
+This repository contains some sample programs. All are Maven projects and can be run directly using "java -jar".
+
+The sample apps are intended to demonstrate problematic scenarios, most of which can be diagnosed with Java Flight Recorder:
+* High allocations
+* Deadlocks
+* High CPU usage
+* Hot methods
+* Latency and thread contention
+* Memory leaks
+* Large number of object references in heap memory
+* Thread leaks
 
 ## How to build
 
