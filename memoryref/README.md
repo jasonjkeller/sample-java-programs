@@ -28,6 +28,12 @@ Use the following command to run the application. The application creates an obj
 the main thread and another object from class `G` in a daemon thread. After that the application will
 wait for a keyboard input.
 
+JDK 9+ (G1GC)  
+```bash
+java -Xmn1g -Xmx2g -Xlog:gc\* -javaagent:target/memoryref.jar -jar target/memoryref.jar
+```
+
+Pre JDK 9  
 ```bash
 java -Xmn1g -Xmx2g -XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps -javaagent:target/memoryref.jar -jar target/memoryref.jar
 ```

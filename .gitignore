@@ -34,3 +34,4 @@ tmp/
 
 # Log files
 *.log
+memoryleak/gc.log*

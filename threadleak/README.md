@@ -15,11 +15,11 @@ number arrays. The application will also print final summary statistics of algor
 
 The application will throw Out of Memory error after some time when you run following command
 
-`java -Xmx1g -XX:+UnlockDiagnosticVMOptions -XX:+DebugNonSafepoints
- -XX:+UnlockCommercialFeatures -XX:+FlightRecorder
- -XX:StartFlightRecording=settings=profile,duration=2m,name=ThreadLeak,filename=threadleak.jfr
- -XX:FlightRecorderOptions=loglevel=info
- -jar target/threadleak.jar`
+JDK 11+  
+`java -Xmx1g -Xmx1g -XX:+UnlockDiagnosticVMOptions -XX:+DebugNonSafepoints -XX:StartFlightRecording=settings=profile,duration=2m,name=ThreadLeak,filename=threadleak.jfr -Xlog:jfr=info -jar target/threadleak.jar`
+
+Pre JDK 11  
+`java -Xmx1g -XX:+UnlockDiagnosticVMOptions -XX:+DebugNonSafepoints -XX:+UnlockCommercialFeatures -XX:+FlightRecorder -XX:StartFlightRecording=settings=profile,duration=2m,name=ThreadLeak,filename=threadleak.jfr -XX:FlightRecorderOptions=loglevel=info -jar target/threadleak.jar`
 
 ### Analyzing Java Flight Recording
 

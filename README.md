@@ -1,13 +1,16 @@
-[![Build Status](https://travis-ci.org/chrishantha/sample-java-programs.svg?branch=master)](https://travis-ci.org/chrishantha/sample-java-programs)
-
 Sample Java Programs
 ====================
 
-This repository contains some sample programs. All are Maven projects and can be run directly using "java -jar"
+This repository contains some sample programs. All are Maven projects and can be run directly using "java -jar". Based on the article found here: 
 
 ## How to build
 
 Run `mvn clean install` to build all sample programs
+
+## References
+
+* [Using Java Flight Recorder](https://medium.com/@chrishantha/using-java-flight-recorder-2367c01deacf)
+* [Java Flight Recorder Cheat Sheet](https://medium.com/@chrishantha/java-flight-recorder-cheat-sheet-98f5143f5f88)
 
 ## License
 

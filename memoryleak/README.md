@@ -26,13 +26,11 @@ However, if the `Key` class does not contain a proper `equals()` implementation 
 
 The application will throw Out of Memory error after some time when you run following command
 
-`java -Xms1g -Xmx1g -XX:+PrintGCDetails -XX:+PrintGC -XX:+PrintGCDateStamps -Xloggc:gc.log
- -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath="/tmp/heap-dump.hprof"
- -XX:+UnlockDiagnosticVMOptions -XX:+DebugNonSafepoints
- -XX:+UnlockCommercialFeatures -XX:+FlightRecorder
- -XX:StartFlightRecording=settings=profile,duration=5m,name=MemoryLeak,filename=memoryleak.jfr
- -XX:FlightRecorderOptions=loglevel=info
- -jar target/memoryleak.jar`
+JDK 11+  
+`java -Xms1g -Xmx1g -Xlog:gc\* -Xlog:gc:gc.log -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath="/tmp/heap-dump.hprof" -XX:+UnlockDiagnosticVMOptions -XX:+DebugNonSafepoints -XX:StartFlightRecording=settings=profile,duration=5m,name=MemoryLeak,filename=memoryleak.jfr -Xlog:jfr=info -jar target/memoryleak.jar`
+
+Pre JDK 11  
+`java -Xms1g -Xmx1g -XX:+PrintGCDetails -XX:+PrintGC -XX:+PrintGCDateStamps -Xloggc:gc.log -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath="/tmp/heap-dump.hprof" -XX:+UnlockDiagnosticVMOptions -XX:+DebugNonSafepoints -XX:+UnlockCommercialFeatures -XX:+FlightRecorder -XX:StartFlightRecording=settings=profile,duration=5m,name=MemoryLeak,filename=memoryleak.jfr -XX:FlightRecorderOptions=loglevel=info -jar target/memoryleak.jar`
 
 ### Analyzing Java Flight Recording
 
