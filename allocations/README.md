@@ -7,6 +7,12 @@ Run the program and also make a profiling recording.
 
 ### How to run
 JDK 11+  
+```bash
+./run-on-jdk-11-plus.sh
+```
+
+or  
+
 `java -Xms64m -Xmx64m -XX:+UnlockDiagnosticVMOptions -XX:+DebugNonSafepoints -XX:StartFlightRecording=settings=profile,duration=30s,name=Allocations,filename=allocations.jfr -Xlog:jfr=info -jar target/allocations.jar`
 
 Pre JDK 11  

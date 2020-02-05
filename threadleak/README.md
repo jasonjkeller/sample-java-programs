@@ -16,6 +16,12 @@ number arrays. The application will also print final summary statistics of algor
 The application will throw Out of Memory error after some time when you run following command
 
 JDK 11+  
+```bash
+./run-on-jdk-11-plus.sh
+```
+
+or  
+
 `java -Xmx1g -Xmx1g -XX:+UnlockDiagnosticVMOptions -XX:+DebugNonSafepoints -XX:StartFlightRecording=settings=profile,duration=2m,name=ThreadLeak,filename=threadleak.jfr -Xlog:jfr=info -jar target/threadleak.jar`
 
 Pre JDK 11  

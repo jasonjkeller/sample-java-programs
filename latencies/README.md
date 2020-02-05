@@ -7,6 +7,12 @@ Run the program and also make a profiling recording.
 
 ### How to run
 JDK 11+  
+```bash
+./run-on-jdk-11-plus.sh
+```
+
+or  
+
 `java -Xms64m -Xmx64m -XX:+UnlockDiagnosticVMOptions -XX:+DebugNonSafepoints -XX:StartFlightRecording=settings=profile,duration=30s,name=Latencies,filename=latencies.jfr -Xlog:jfr=info -jar target/latencies.jar`
 
 Pre JDK 11  
