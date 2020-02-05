@@ -4,7 +4,7 @@ Sample Java Programs
 This repository contains some sample programs. All are Maven projects and can be run directly using "java -jar".
 
 The sample apps are intended to demonstrate problematic scenarios, most of which can be diagnosed with Java Flight Recorder:
-* High allocations
+* High Object allocation rate
 * Deadlocks
 * High CPU usage
 * Hot methods
